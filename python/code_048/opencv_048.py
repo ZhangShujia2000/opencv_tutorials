@@ -25,7 +25,7 @@ binary = threshold_demo(src)
 canny = canny_demo(src)
 
 # 轮廓发现
-out, contours, hierarchy = cv.findContours(canny, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv.findContours(canny, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 for c in range(len(contours)):
     cv.drawContours(src, contours, c, (0, 0, 255), 2, 8)
 
